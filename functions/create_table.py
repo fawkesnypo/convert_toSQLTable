@@ -19,7 +19,7 @@ def generate_table(name,file) -> str:
         if columns_info.__len__() == counter:
             value:str = lista[-1]
             lista.pop(-1)
-            lista.append(value.replace(',\n','\n)'))
+            lista.append(value.replace(',\n',',\nPRIMARY KEY (ID)\n)'))
 
         counter+=1
 
