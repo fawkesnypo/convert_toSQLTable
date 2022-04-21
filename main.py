@@ -39,7 +39,7 @@ def insert_table():
 
     return redirect(url_for('static', filename=file))
 
-@app.route("/CREATE_AND_POPULATE",methods=['GET'])
+@app.route("/CREATE_AND_POPULATE",methods=['POST'])
 def create_and_populate():
     from functions.create_table import generate_table
     from functions.populate_table import populate_table
