@@ -40,13 +40,13 @@ def populate_table(name,file) -> str:
 
                 if type(columns[key][counter]) != int:
                     if str.isalnum(columns[key][counter]):
-                        values += f"""'{columns[key][counter]}'),\n"""
+                        values += f"""'{columns[key][counter]}')\n"""
                     
                     elif str.isnumeric(columns[key][counter]):
-                        values += f'{int(columns[key][counter])}),\n'
+                        values += f'{int(columns[key][counter])})\n'
                     
                 elif type(columns[key][counter]) == int:
-                    values += f'{columns[key][counter]}),\n '
+                    values += f'{columns[key][counter]})\n '
             
             elif type(columns[key][counter]) != int:
                 if str.isalnum(columns[key][counter]):

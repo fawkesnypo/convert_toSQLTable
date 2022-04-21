@@ -22,7 +22,7 @@ def create_table():
     with open(f"./static/{file_name}",'w',encoding = 'utf-8') as file:
         file.write(sql_create)
 
-    return f'''Arquivo gerado!<br>
+    return f'''Arquivo gerado!
     /static/{file_name}
     '''
 
@@ -39,7 +39,7 @@ def insert_table():
     with open(f"./static/{file_name }",'w',encoding = 'utf-8') as file:
         file.write(sql_insert)
 
-    return f'''Arquivo gerado!<br>
+    return f'''Arquivo gerado!
     /static/{file_name}
     '''
 
@@ -61,7 +61,7 @@ def create_and_populate():
         file.write('\n')
         file.write(sql_insert)
 
-    return f'''Arquivo gerado!<br>
+    return f'''Arquivo gerado!
     /static/{file_name}
     '''
     
