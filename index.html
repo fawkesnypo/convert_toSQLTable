@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        }
+
+        body{
+            font-size: 100%;
+            background: black;
+        }
+
+        h1{
+            color: chartreuse;
+        }
+
+        p{
+            color: chartreuse;
+        }
+
+        div{
+            margin: 15vh 15vh 5vh 15vh;
+            border: 2px dotted chartreuse;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            line-height: 6vh;
+        }
+        table, th, td {
+            border: 1px inset chartreuse;
+        }
+
+        th{
+            font-weight: bold;
+            color:chartreuse;
+            padding: 5px;
+        }
+        th.second-child { width: 50vh  }
+
+        td{
+            color: chartreuse;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Olá!</h1>
+        <p>Essa API tem como finalidade converter uma planilha(CSV, XLS, XLSX) em um código SQL.<br>
+            Ela possui três requisições POST que retornaram um caminho para download de um arquivo .sql! 
+        </p>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Routes</th>
+                    <th class="second-child">Parâmetros</th>
+                    <th>Função</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>/CREATE_TABLE</td>
+                    <td>
+                        name - Nome da tabela<br>
+                        file_dir - Diretório da planilha
+                    </td>
+                    <td>
+                        Gerar um arquivo .sql contendo o comando "CREATE TABLE" do SQL de
+                        acordo com as colunas presentes na planilha.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>/INSERT_TABLE</td>
+                    <td>
+                        name - Nome da tabela<br>
+                        file_dir - Diretório da planilha
+                    </td>
+                    <td>
+                        Gerar um arquivo .sql contendo o comando "INSERT" do SQL de
+                        acordo com as inforpresentes na planilha.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>/CREATE_AND_POPULATE</td>
+                    <td>
+                        name - Nome da tabela<br>
+                        file_dir - Diretório da planilha
+                    </td>
+                    <td>
+                        Gerar um arquivo .sql contendo o comando "CREATE TABLE" e "INSERT" do SQL de
+                        acordo com as informações presentes na planilha.
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <h2>Teste</h3>
+    
+</body>
+
+</html>
