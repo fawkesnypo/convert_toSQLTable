@@ -1,0 +1,8 @@
+version: "2"
+services:
+  flask:
+    network_mode: host
+    container_name: "convert_table_app"
+    image: "convert_table"
+    expose:
+      - "8133"
